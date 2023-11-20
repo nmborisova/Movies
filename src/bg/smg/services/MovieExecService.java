@@ -27,12 +27,12 @@ public class MovieExecService implements MovieExecServiceI {
         try {
             this.connection = dataSource.getConnection();
             try (PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM movieexec WHERE id=?")) {
+                    "SELECT * FROM movieexec WHERE cert=?")) {
                 statement.setInt(1, id);
                 ResultSet resultSet = statement.executeQuery();
                 resultSet.first();
                 MovieExec movieExec = new MovieExec();
-                movieExec.setCert(resultSet.getInt("cert#"));
+                movieExec.setCert(resultSet.getInt("cert"));
                 movieExec.setName(resultSet.getString("name"));
                 movieExec.setAddress(resultSet.getString("address"));
                 movieExec.setNetworth(resultSet.getLong("networth"));

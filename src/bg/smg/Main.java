@@ -1,7 +1,6 @@
 package bg.smg;
 
 import bg.smg.model.Movie;
-import bg.smg.services.MovieExecServiceI;
 import bg.smg.services.MovieService;
 import bg.smg.services.MovieServiceI;
 

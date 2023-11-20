@@ -39,13 +39,13 @@ public class MovieService implements MovieServiceI{
                     movie.setTitle(resultSet.getString("title"));
                     movie.setYear(resultSet.getInt("year"));
                     movie.setLength(resultSet.getInt("length"));
-                    movie.setInColor((Character) resultSet.getObject("incolor"));
+                    movie.setInColor(resultSet.getString("incolor").charAt(0));
 
-                    String studioName = resultSet.getString("studioname");
-                    Studio studio = studioService.getByName(studioName);
-                    movie.setStudio(studio);
+//                    String studioName = resultSet.getString("studioname");
+//                    Studio studio = studioService.getByName(studioName);
+//                    movie.setStudio(studio);
 
-                    int producerId = resultSet.getInt("producerc#");
+                    int producerId = resultSet.getInt("producerc");
                     System.out.println(producerId);
                     movie.setProducer(movieExecService.getById(producerId));
 

@@ -15,15 +15,22 @@ public class Movie {
 
     public Movie(){
         this.title="";
-        this.year=1000;
+        this.year=0;
         this.length=0;
-        this.inColor='Y';
+        this.inColor='_';
         this.studio=new Studio();
         this.producer=new MovieExec();
     }
 
-//    @Override
-//    public String toString(){
-//
-//    }
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", year=" + year +
+                ", length=" + length +
+                ", inColor=" + inColor +
+                ", studio=" + studio +
+                ", producer=" + producer +
+                '}';
+    }
 }

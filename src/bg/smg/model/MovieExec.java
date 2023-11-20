@@ -12,4 +12,14 @@ public class MovieExec {
     private String name;
     private String address;
     private long networth;
+
+    @Override
+    public String toString() {
+        return "MovieExec{" +
+                "cert=" + cert +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", networth=" + networth +
+                '}';
+    }
 }
