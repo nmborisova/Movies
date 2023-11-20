@@ -46,7 +46,7 @@ public class MovieService implements MovieServiceI{
 //                    movie.setStudio(studio);
 
                     int producerId = resultSet.getInt("producerc");
-                    System.out.println(producerId);
+                   //System.out.println(producerId);
                     movie.setProducer(movieExecService.getById(producerId));
 
                     movies.add(movie);

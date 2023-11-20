@@ -13,7 +13,7 @@ public class Main {
         MovieServiceI ms = new MovieService();
         List<Movie> movies = ms.getAll();
         for(Movie m : movies) {
-            m.toString();
+            System.out.println(m.toString());
         }
     }
 }
